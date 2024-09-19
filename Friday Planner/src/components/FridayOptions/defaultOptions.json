@@ -1,0 +1,53 @@
+{
+  "options": [
+    {
+      "label": "Home",
+      "type": "location",
+      "asset": "/src/assets/img/home.png"
+    },
+    {
+      "label": "Go out",
+      "type": "location",
+      "asset": "/src/assets/img/go out.png"
+    },
+    {
+      "label": "Italian",
+      "type": "dinner",
+      "asset": "/src/assets/img/italian.png"
+    },
+    {
+      "label": "Mexican",
+      "type": "dinner",
+      "asset": "/src/assets/img/mexican.png"
+    },
+    {
+      "label": "Asian",
+      "type": "dinner",
+      "asset": "/src/assets/img/asian.png"
+    },
+    {
+      "label": "Beer",
+      "type": "drink",
+      "asset": "/src/assets/img/beer.png"
+    },
+    {
+      "label": "Wine",
+      "type": "drink",
+      "asset": "/src/assets/img/wine.png"
+    }
+  ],
+  "zones": [
+    {
+      "type": "location",
+      "color": "var(--positive-color)"
+    },
+    {
+      "type": "dinner",
+      "color": "var(--surface-accent-color)"
+    },
+    {
+      "type": "drink",
+      "color": "var(--surface-secondary-color)"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+.root {
+  position: relative;
+  height: 100%;
+}
+/* src/components/Weather.css */
+.weather-card {
+  padding: 20px;
+  text-align: center;
+  color: var(--heading-color);
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  height: 100%;
+  justify-content: center;
+}
+
+.weather-card h2 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.weather-card p {
+  margin: 4px 0;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+/* src/components/LocationOverlay.css */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay-content {
+  padding: 20px;
+  display: grid;
+  grid-template-rows: auto auto;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.overlay-content h2 {
+  margin: 0 0 10px 0;
+  color: var(--heading-color);
+  font-size: var(--heading-4-size);
+}
+
+.overlay-content form {
+  display: flex;
+  flex-direction: column;
+}
+
+.overlay-content input {
+  margin-bottom: 10px;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: var(--small-text-size);
+  font-family: 'Poppins', sans-serif;
+  color: var(--heading-color);
+  border: 1px solid var(--border-color);
+  background-color: transparent;
+}
+.overlay-content input::placeholder {
+  color: var(--heading-color);
+  opacity: 1;
+}
+.overlay-content input:focus-visible {
+  border: 1px solid var(--border-color);
+}
+.overlay-content button {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: unset;
+  font-size: var(--small-text-size);
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 150ms ease-in-out;
+}
+
+.overlay-content button:hover {
+  color: var(--heading-color);
+  background-color: #ececec0d;
+}
+
+form {
+  height: fit-content;
+}

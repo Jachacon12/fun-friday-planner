@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Konkhmer+Sleokchher&family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --font-size: var(--heading-3-size);
+}
+
+.clock {
+  font-family: 'Konkhmer Sleokchher', sans-serif;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 2rem;
+  font-size: var(--font-size);
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --font-size: var(--heading-4-size);
+  }
+}
+@media (max-width: 640px) {
+  :root {
+    --font-size: var(--heading-2-size);
+  }
+}
+.bigtime {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  position: relative;
+  color: var(--secondary-color);
+  box-sizing: border-box;
+  width: 100%; /* Fixed width */
+  height: 100px; /* Fixed height */
+  font-weight: var(--font-weight-black);
+}
+
+.bigtime > span {
+  font-family: 'Konkhmer Sleokchher', sans-serif;
+}
+
+.time {
+  color: #fff;
+  font-size: var(--font-size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1 / 1;
+}
+
+.hr {
+  color: snow;
+}
+
+a {
+  height: 50px; /* Fixed height */
+  width: 50px; /* Fixed width */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  background: snow;
+  border-radius: 10px;
+  bottom: 30px;
+  right: 30px;
+  user-select: none;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+a svg {
+  height: 30px; /* Fixed height */
+  width: 30px; /* Fixed width */
+  fill: crimson;
+}
+
+a:hover {
+  box-shadow: 2px 2px 1px crimson;
+}
+
+.lowtime {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px; /* Fixed width */
+  gap: 4px;
+}
+
+.bottom {
+  color: crimson;
+  font-size: calc(var(--font-size) / 3);
+}
+
+.dot {
+  color: #fff;
+  font-size: var(--font-size);
+}
