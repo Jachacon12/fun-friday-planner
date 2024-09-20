@@ -4,7 +4,7 @@ import FridayOptions from '../components/FridayOptions';
 import '../assets/styles/intro.css';
 import MainGrid from '../components/MainGrid.jsx';
 
-const App = () => {
+const App = ({ onLogout }) => {
   const [isPanelVisible, setIsPanelVisible] = useState(false);
   const updateContentRef = useRef(null);
   const togglePanel = () => {
@@ -26,6 +26,7 @@ const App = () => {
           <MainGrid
             togglePanel={togglePanel}
             updateContentRef={updateContentRef}
+            onLogout={onLogout}
           />
           <FridayOptions isVisible={isPanelVisible} closePanel={closePanel} />
         </main>

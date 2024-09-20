@@ -5,7 +5,7 @@ import WeatherWidget from './WeatherWidget';
 import TodoApp from './TodoList/index';
 import { TasksProvider } from './TasksProvider';
 
-export default function MainGrid({ togglePanel, updateContentRef }) {
+export default function MainGrid({ togglePanel, updateContentRef, onLogout }) {
   const [content, setContent] = useState({
     location: null,
     dinner: null,
@@ -89,7 +89,7 @@ export default function MainGrid({ togglePanel, updateContentRef }) {
           <TrendingMovies />
         </article>
         <article className="card clock-tile ratio2-1">
-          <DigitalClock />
+          <DigitalClock onLogout={onLogout} />
         </article>
         <article className="card large-card music-player">
           <iframe
