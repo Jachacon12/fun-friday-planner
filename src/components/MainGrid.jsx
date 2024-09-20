@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import DigitalClock from '../components/DigitalClock/index';
 import TrendingMovies from '../components/TrendingMovies/index';
 import WeatherWidget from './WeatherWidget';
-import TodoApp from './TodoList/index';
+import TodoApp from './TodoList/todo-list';
 import { TasksProvider } from './TasksProvider';
 
 export default function MainGrid({ togglePanel, updateContentRef }) {
