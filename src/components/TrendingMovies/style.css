@@ -8,10 +8,8 @@
   margin: auto;
   color: var(--secondary-color);
   background-position: center center;
-  /* background-repeat: no-repeat; */
   background-size: contain;
   background-size: 200px 300px;
-  /* padding: 20px 0; */
 }
 
 .carousel::after {
@@ -36,10 +34,6 @@
 .carousel-item {
   min-width: 100%;
   box-sizing: border-box;
-  /* display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  align-items: center; */
 }
 
 .carousel img {
