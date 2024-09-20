@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import './style.css';
 
-const Clock = () => {
+const Clock = ({ onLogout }) => {
   const [time, setTime] = useState({
     hours: '00',
     minutes: '00',
@@ -68,6 +68,9 @@ const Clock = () => {
           <span>{time.session}</span>
         </div>
       </div>
+      <button className="watch-btn" onClick={onLogout} aria-label="Watch later">
+        Log out
+      </button>
     </div>
   );
 };
