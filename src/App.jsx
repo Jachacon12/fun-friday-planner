@@ -27,35 +27,36 @@ function App() {
 
   return (
     <Routes>
+      {/* Login Route: Accessible only when not authenticated */}
       <Route
         path="/login"
         element={
-          !isAuthenticated ? (
-            <Login onLogin={handleLogin} />
-          ) : (
-            <Navigate to="/" />
-          )
-        }
-      />
-      <Route
-        path="/"
-        element={
           isAuthenticated ? (
-            <Home onLogout={handleLogout} />
+            <Navigate to="/dashboard" replace />
           ) : (
-            <Navigate to="/login" />
+            <Login onLogin={handleLogin} />
           )
         }
       />
+
+      <Route path="/" element={<Home />} />
+
+      {/* Dashboard Route: Only accessible if authenticated */}
       <Route
         path="/dashboard"
         element={
           isAuthenticated ? (
             <Planner onLogout={handleLogout} />
           ) : (
-            <Navigate to="/login" />
+            <Navigate to="/login" replace />
           )
         }
+      />
+
+      {/* Catch-all route to handle any unknown paths */}
+      <Route
+        path="*"
+        element={<Navigate to={isAuthenticated ? '/' : '/login'} />}
       />
     </Routes>
   );
